@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "WorkSans";
+        src: url(./assets/fonts/static/WorkSans-Regular.ttf) format("truetype");
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "WorkSans";
+        src: url(./assets/fonts/static/WorkSans-SemiBold.ttf) format("truetype");
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      @font-face {
+        font-family: "WorkSans";
+        src: url(./assets/fonts/static/WorkSans-Bold.ttf) format("truetype");
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      body {
+        font-family: "WorkSans";
+        background-color: #f9eeff;
+      }
+
+      .contenedor {
+        background: url(./assets/images/background-pattern-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        position: relative;
+      }
+
+      .card {
+        width: 35%;
+        /* margin: auto; */
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 20px;
+        /* min-height: 400px; */
+        padding: 40px;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 30%;
+        /* transform: translate(-50%, -50%); */
+      }
+
+      @media screen and (max-width: 700px) {
+        .card {
+          width: 75%;
+          padding: 20px;
+          left: 8%;
+        }
+      }
+
+      .card-title > * {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 0;
+      }
+      .card-title h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+      .acordion-item {
+        border-bottom: 1px solid #d2cad4;
+        padding: 20px 0px;
+      }
+
+      .acordion-item:last-child {
+        border-bottom: none;
+      }
+      .acordion-header {
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .acordion-header > * {
+        display: inline-block;
+      }
+
+      .acordion-header .minus {
+        display: none;
+      }
+
+      .acordion-header:hover {
+        cursor: pointer;
+        color: #ba44f2;
+      }
+
+      .acordion-content {
+        display: none;
+        color: #d1d1d1;
+        padding: 20px 0px;
+        line-height: 1.5;
+        /*  transition: max-height 0.5s ease-out, padding 0.5s ease-out; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="card">
+        <div class="card-title">
+          <img src="./assets/images/icon-star.svg" alt="" />
+          <h1>FAQs</h1>
+        </div>
+        <div class="card-body">
+          <div class="acordion">
+            <div class="acordion-item">
+              <div class="acordion-header">
+                What is Frontend Mentor, and how will it help me?
+                <span class="plus"
+                  ><img src="./assets/images/icon-plus.svg" alt=""
+                /></span>
+                <span class="minus"
+                  ><img src="./assets/images/icon-minus.svg" alt=""
+                /></span>
+              </div>
+              <div class="acordion-content">
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </div>
+            </div>
+            <div class="acordion-item">
+              <div class="acordion-header">
+                Is Frontend Mentor free?
+                <span class="plus"
+                  ><img src="./assets/images/icon-plus.svg" alt=""
+                /></span>
+                <span class="minus"
+                  ><img src="./assets/images/icon-minus.svg" alt=""
+                /></span>
+              </div>
+              <div class="acordion-content">
+                Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the free option providing access to a range of
+                projects suitable for all skill levels.
+              </div>
+            </div>
+            <div class="acordion-item">
+              <div class="acordion-header">
+                Can I use Frontend Mentor projects in my portfolio?
+                <span class="plus"
+                  ><img src="./assets/images/icon-plus.svg" alt=""
+                /></span>
+                <span class="minus"
+                  ><img src="./assets/images/icon-minus.svg" alt=""
+                /></span>
+              </div>
+              <div class="acordion-content">
+                Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's an excellent way to showcase your skills to
+                potential employers!
+              </div>
+            </div>
+            <div class="acordion-item">
+              <div class="acordion-header">
+                How can I get help if I'm stuck on a Frontend Mentor challenge?
+                <span class="plus"
+                  ><img src="./assets/images/icon-plus.svg" alt=""
+                /></span>
+                <span class="minus"
+                  ><img src="./assets/images/icon-minus.svg" alt=""
+                /></span>
+              </div>
+              <div class="acordion-content">
+                The best place to get help is inside Frontend Mentor's Discord
+                community. There's a help channel where you can ask questions
+                and seek support from other community members.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const headers = document.querySelectorAll(".acordion-header");
+
+        console.log(headers);
+
+        headers.forEach((header) => {
+          header.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+
+            const icon = this.querySelectorAll("span");
+
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              icon[0].style.display = "inline-block";
+              icon[1].style.display = "none";
+            } else {
+              content.style.display = "block";
+              icon[0].style.display = "none";
+              icon[1].style.display = "inline-block";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
